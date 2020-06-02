@@ -1,8 +1,8 @@
-$loadEnvPath = Join-Path $PSScriptRoot 'loadEnv.ps1'
-if (-Not (Test-Path -Path $loadEnvPath)) {
-    $loadEnvPath = Join-Path $PSScriptRoot '..\loadEnv.ps1'
-}
-. ($loadEnvPath)
+Remove-Module -Name "Az.Accounts"
+Import-Module -Name "Az.Accounts" -RequiredVersion 2.0.1
+
+. (Join-Path $PSScriptRoot 'loadEnvJson.ps1')
+
 $TestRecordingFile = Join-Path $PSScriptRoot 'Get-AzsBackupConfiguration.Recording.json'
 $currentPath = $PSScriptRoot
 while(-not $mockingPath) {
@@ -46,7 +46,7 @@ Describe 'Get-AzsBackupConfiguration' {
         $backupLocations = Get-AzsBackupConfiguration -Top 10
         $backupLocations  | Should Not Be $null
         foreach ($backupLocation in $backupLocations) {
-            $result = $backupLocation | Get-AzsBackupConfiguration
+            $result = Get-AzsBackupConfiguration -InputObject $backupLocation
             ValidateBackupLocation -BackupLocation $result
             AssertBackupLocationsAreEqual -expected $backupLocation -found $result
         }
