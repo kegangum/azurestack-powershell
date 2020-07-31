@@ -50,7 +50,14 @@ require:
   - $(this-folder)/../readme.azurestack.md
 
 input-file:
-  - $(this-folder)/dummy.json
-
-output-folder: $(this-folder)/toss/
+- https://github.com/Azure/azure-rest-api-specs/tree/master/specification/azsadmin/resource-manager/deployment/Microsoft.Deployment.Admin/preview/2019-01-01/Deployment.json
+- https://github.com/Azure/azure-rest-api-specs/tree/master/specification/azsadmin/resource-manager/deployment/Microsoft.Deployment.Admin/preview/2019-01-01/ActionPlan.json
+- https://github.com/Azure/azure-rest-api-specs/tree/master/specification/azsadmin/resource-manager/deployment/Microsoft.Deployment.Admin/preview/2019-01-01/ActionPlanOperation.json
+- https://github.com/Azure/azure-rest-api-specs/tree/master/specification/azsadmin/resource-manager/deployment/Microsoft.Deployment.Admin/preview/2019-01-01/FileContainer.json
+- https://github.com/Azure/azure-rest-api-specs/tree/master/specification/azsadmin/resource-manager/deployment/Microsoft.Deployment.Admin/preview/2019-01-01/ProductDeployment.json
+- https://github.com/Azure/azure-rest-api-specs/tree/master/specification/azsadmin/resource-manager/deployment/Microsoft.Deployment.Admin/preview/2019-01-01/ProductPackage.json
+- https://github.com/Azure/azure-rest-api-specs/tree/master/specification/azsadmin/resource-manager/deployment/Microsoft.Deployment.Admin/preview/2019-01-01/ProductSecret.json
+- https://github.com/Azure/azure-rest-api-specs/tree/master/specification/azsadmin/resource-manager/deployment/Microsoft.Deployment.Admin/preview/2019-01-01/ActionPlanOperationAttempt.json
+- https://github.com/Azure/azure-rest-api-specs/tree/master/specification/azsadmin/resource-manager/deployment/Microsoft.Deployment.Admin/preview/2019-01-01/Locations.json
+- https://github.com/Azure/azure-rest-api-specs/tree/master/specification/azsadmin/resource-manager/deployment/Microsoft.Deployment.Admin/preview/2019-01-01/OperationResults.json
 ```
